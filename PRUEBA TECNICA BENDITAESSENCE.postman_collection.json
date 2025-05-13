@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "ec4fe0a8-c38a-44eb-9b16-559c18d5c2c7",
+		"name": "PRUEBA TECNICA BENDITAESSENCE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31286089"
+	},
+	"item": [
+		{
+			"name": "GET CLIENTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"documentId\": \"123456789\",\r\n  \"direction\": \"Calle 123 #45-67\",\r\n  \"city\": \"Bogotá\",\r\n  \"deliveries\": [\r\n    {\r\n      \"orderId\": \"ORD001\",\r\n      \"description\": \"Entrega de productos electrónicos\",\r\n      \"deliveryDate\": \"2025-05-18T10:00:00Z\"\r\n    },\r\n    {\r\n      \"orderId\": \"ORD002\",\r\n      \"description\": \"Entrega de electrodomésticos\",\r\n      \"deliveryDate\": \"2025-05-20T14:30:00Z\"\r\n    }\r\n  ]\r\n}"
+				},
+				"url": "http://localhost:8080/client/123456789"
+			},
+			"response": []
+		},
+		{
+			"name": "GET DELIVERY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/delivery/ORD001"
+			},
+			"response": []
+		},
+		{
+			"name": "POST CLIENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"documentId\": \"123456789\",\r\n  \"direction\": \"Calle 123 #45-67\",\r\n  \"city\": \"Bogotá\",\r\n  \"deliveries\": [\r\n    {\r\n      \"orderId\": \"ORD001\",\r\n      \"description\": \"Entrega de productos electrónicos\",\r\n      \"deliveryDate\": \"2025-05-18T10:00:00Z\"\r\n    },\r\n    {\r\n      \"orderId\": \"ORD002\",\r\n      \"description\": \"Entrega de electrodomésticos\",\r\n      \"deliveryDate\": \"2025-05-20T14:30:00Z\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/client"
+			},
+			"response": []
+		},
+		{
+			"name": "POST DELIVERY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"orderId\": \"ORD001\",\r\n      \"description\": \"Entrega de productos electrónicos\",\r\n      \"deliveryDate\": \"2025-05-18T10:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		}
+	]
+}
